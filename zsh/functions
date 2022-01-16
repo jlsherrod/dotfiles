@@ -1,0 +1,16 @@
+####
+# git
+# g for git status
+# -or-
+# g anything else for git anything else
+####
+function g {
+  if [[ $# > 0 ]]; then
+    git $@
+  else
+    git status
+  fi
+}
+
+# Complete g like git
+compdef g=git
