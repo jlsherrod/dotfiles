@@ -14,3 +14,8 @@ function g {
 
 # Complete g like git
 compdef g=git
+
+# Auto complete for home directory
+h() { cd ~/$1; }
+_h() { _files -W ~/ -/; }
+compdef _h h
