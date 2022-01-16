@@ -1,0 +1,7 @@
+[user]
+	name = James Sherrod
+	email = jlsherrod@gmail.com
+[core]
+	editor = code --wait
+[init]
+	defaultBranch = main
