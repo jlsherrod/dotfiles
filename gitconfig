@@ -20,4 +20,6 @@
   ca = commit --amend
   car = commit --amend --no-edit
 
+[commit]
+  template = ~/.gitmessage
 
