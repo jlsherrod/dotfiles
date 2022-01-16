@@ -8,7 +8,7 @@
 
 [init]
   defaultBranch = main
-  
+
 [alias]
   br = branch -v
   st = status
@@ -26,6 +26,7 @@
 
 [commit]
   template = ~/.gitmessage
+  verbose = true
 
 [interactive]
   diffFilter = diff-so-fancy --patch
