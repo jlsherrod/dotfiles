@@ -19,3 +19,8 @@ compdef g=git
 h() { cd ~/$1; }
 _h() { _files -W ~/ -/; }
 compdef _h h
+
+# Show contents of directory after cd-ing into it
+chpwd() {
+  ls -lF
+}
