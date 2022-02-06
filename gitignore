@@ -1,0 +1,3 @@
+# Files to ignore globally #
+.vscode/
+node_modules/
