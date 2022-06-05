@@ -1,13 +1,9 @@
-export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="code"
 export VISUAL="code"
 
-ZSH_THEME="robbyrussell"
 eval "$(starship init zsh)"
 
-plugins=()
-
-source $ZSH/oh-my-zsh.sh
+source $HOME/.zsh/completion
 source $HOME/.zsh/functions
 
 # Add fzf 'fuzzy find' 
