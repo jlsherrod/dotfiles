@@ -3,6 +3,7 @@ export EDITOR="code"
 export VISUAL="code"
 
 ZSH_THEME="robbyrussell"
+eval "$(starship init zsh)"
 
 plugins=()
 
