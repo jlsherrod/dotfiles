@@ -1,4 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="code"
+export VISUAL="code"
 
 ZSH_THEME="robbyrussell"
 
