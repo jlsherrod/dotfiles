@@ -12,3 +12,6 @@ cmd open ${{
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
 }}
+
+# map escape quit
+map <esc> quit
