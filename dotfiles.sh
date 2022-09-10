@@ -8,7 +8,8 @@ echo ""
 echo "Installing dot files..."
 echo ""
 
-rcup -v -x "*.sh" -x "*.md" -x "iterm/com*"
+rcup -v -x "*.sh" -x "*.md" -x "iterm/com*" -x "config/karabiner"
 
 # must symlink the directory for these apps
 ln -sf "$HOME"/.dotfiles/iterm "$HOME"/.config
+ln -sf "$HOME"/.dotfiles/config/karabiner "$HOME"/.config
