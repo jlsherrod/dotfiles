@@ -1,0 +1,2 @@
+-- config for nvim-autopairs
+--
