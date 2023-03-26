@@ -18,6 +18,5 @@ echo ""
 echo "Cleaning up broken symlinks..."
 echo ""
 find -L "$HOME" -maxdepth 1 -type l -exec rm -i {} \;
-find -L "$HOME/.bin" -type l -exec rm -i {} \;
 find -L "$HOME/.config" -type l -exec rm -i {} \;
 find -L "$HOME/.zsh" -type l -exec rm -i {} \;
