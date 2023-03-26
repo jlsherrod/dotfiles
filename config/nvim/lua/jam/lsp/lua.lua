@@ -9,6 +9,7 @@ require('lspconfig').lua_ls.setup({
       format = { enable = false },
       runtime = { version = 'LuaJIT' },
       telemetry = { enable = false },
+      workspace = { checkThirdParty = false },
     },
   },
   capabilities = require('jam.lsp').capabilities(),

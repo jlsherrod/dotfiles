@@ -39,3 +39,5 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+-- don't ue swap files
+vim.o.swapfile = false
