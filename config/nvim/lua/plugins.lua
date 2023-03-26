@@ -31,7 +31,8 @@ function M.setup()
     -- Git related plugins
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
-
+    -- Alpha-nvim - greeter screen
+    'goolord/alpha-nvim',
     -- Detect tabstop and shiftwidth automatically
     'tpope/vim-sleuth',
     -- Tmux navigator for use with toggleterm.nvim
