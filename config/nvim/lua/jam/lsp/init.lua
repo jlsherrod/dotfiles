@@ -1,7 +1,8 @@
 local M = {}
 
 function M.setup()
-  require("jam.lsp.lua")
+  require('jam.lsp.lua')
+  require('jam.lsp.javascript')
 end
 
 function M.on_attach(_, bufnr)
@@ -48,9 +49,9 @@ function M.on_attach(_, bufnr)
 end
 
 function M.capabilities()
--- nvim-cmp supports additional completion capabilities, so broadcast that to servers
+  -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
   local capabilities = vim.lsp.protocol.make_client_capabilities()
-  capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities) 
+  capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
   return capabilities
 end
 
