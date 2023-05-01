@@ -103,6 +103,7 @@ local function mru(start, cwd, items_number, opts)
       oldfiles[#oldfiles + 1] = v
     end
   end
+  local target_width = 35
 
   local tbl = {}
   for i, fn in ipairs(oldfiles) do
@@ -185,8 +186,8 @@ local buttons = {
     { type = 'padding', val = 1 },
 
     dashboard.button('e', '  New file', '<cmd>ene<cr>'),
-    dashboard.button('<leader>f', '  Find file'),
-    dashboard.button('<leader>s', '  Live grep'),
+    dashboard.button('<leader>sf', '  Find file'),
+    dashboard.button('<leader>sg', '  Live grep'),
     dashboard.button('<C-f> h', '  Search help'),
     dashboard.button('u', '  Update plugins', '<cmd>Lazy sync<cr>'),
     dashboard.button('q', '  Quit', '<cmd>qa<cr>'),

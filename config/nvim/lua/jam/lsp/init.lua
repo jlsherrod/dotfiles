@@ -3,6 +3,7 @@ local M = {}
 function M.setup()
   require('jam.lsp.lua')
   require('jam.lsp.javascript')
+  require('jam.lsp.emmet')
 end
 
 function M.on_attach(_, bufnr)
