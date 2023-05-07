@@ -27,7 +27,8 @@ function M.setup()
   --    as they will be available in your neovim runtime.
   require('lazy').setup({
     -- NOTE: First, some plugins that don't require any configuration
-
+    --add autopairs
+    'windwp/nvim-autopairs',
     -- Git related plugins
     'tpope/vim-fugitive',
     'tpope/vim-rhubarb',
