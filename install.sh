@@ -51,17 +51,9 @@ installRust() {
 installHomebrewPackages() {
   case $os in
     $macOS*)
-      echo -e "Make sure you've launched the Mac App Store and signed into your accounts!"
-      echo -e "Type 'done' when you're ready to continue."
-      read -r confirm
-      if [ "$confirm" != "done" ] ; then
-        echo "Glad I asked! Bye."
-        exit 1
-      else
         ##Accept xcode license for multiple items in homebrew
         sudo xcodebuild -license accept
         brew bundle
-      fi
       ;;
     $ubuntu*)
       sudo timedatectl set-timezone America/Chicago
