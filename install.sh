@@ -40,14 +40,6 @@ setupDotFiles() {
   (cd "$HOME"/.dotfiles || exit; bash dotfiles.sh)
 }
 
-installRust() {
-  if ! command -v rustup >/dev/null 2>&1; then
-    curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh -s -- -y -q --no-modify-path
-  else
-    rustup update
-  fi
-}
-
 installHomebrewPackages() {
   case $os in
     $macOS*)
@@ -82,7 +74,6 @@ verifyPrivateFileExists
 installHomebrew
 installHomebrewPackages
 setupDotFiles
-installRust
 miscellaneous
 
 echo ""
