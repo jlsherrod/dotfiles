@@ -53,8 +53,7 @@ function M.setup()
 				"williamboman/mason-lspconfig.nvim",
 				"jose-elias-alvarez/typescript.nvim",
 
-				-- Useful status updates for LSP
-				-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
+				-- Useful status updates for:			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
 				{ "j-hui/fidget.nvim", opts = {} },
 
 				-- Additional lua configuration, makes nvim stuff amazing!
@@ -63,6 +62,9 @@ function M.setup()
 		},
 		-- Optimize vim load times with impatient
 		"lewis6991/impatient.nvim",
+		{ -- break out luasnip
+			"L3MON4D3/LuaSnip",
+		},
 
 		{ -- Autocompletion
 			"hrsh7th/nvim-cmp",
