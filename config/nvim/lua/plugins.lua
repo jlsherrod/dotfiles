@@ -65,6 +65,21 @@ function M.setup()
 		{ -- break out luasnip
 			"L3MON4D3/LuaSnip",
 		},
+		{
+			"wassimk/scalpel.nvim",
+			version = "*",
+			config = true,
+			keys = {
+				{
+					"<leader>e",
+					function()
+						require("scalpel").substitute()
+					end,
+					mode = { "n", "x" },
+					desc = "substitute word(s)",
+				},
+			},
+		},
 
 		{ -- Autocompletion
 			"hrsh7th/nvim-cmp",
