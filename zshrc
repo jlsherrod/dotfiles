@@ -1,6 +1,7 @@
 export EDITOR="nvim"
 export VISUAL="code"
 alias vim="nvim"
+alias dots="cd ~/.dotfiles"
 
 eval "$(starship init zsh)"
 

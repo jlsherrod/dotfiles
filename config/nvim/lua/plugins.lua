@@ -80,6 +80,16 @@ function M.setup()
 				},
 			},
 		},
+<<<<<<< HEAD
+=======
+		{
+			"wassimk/gh-navigator.nvim",
+			cmd = { "GH", "GHBlame", "GHFile", "GHPR", "GHRepo" },
+			version = "*",
+			config = true,
+			dev = true,
+		},
+>>>>>>> bb18ffc (add scalpel and gh-navigator plugins)
 
 		{ -- Autocompletion
 			"hrsh7th/nvim-cmp",
@@ -161,7 +171,9 @@ function M.setup()
 				})
 			end,
 		},
-	}, {})
+	}, {
+		dev = { path = "~/Projects/neovim" },
+	})
 end
 
 return M

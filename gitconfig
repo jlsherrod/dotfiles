@@ -29,6 +29,9 @@
   template = ~/.gitmessage
   verbose = true
 
+[push]
+  autoSetupRemote = true
+
 [interactive]
   diffFilter = diff-so-fancy --patch
 
