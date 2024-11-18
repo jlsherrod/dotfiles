@@ -43,6 +43,8 @@ function M.setup()
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 		-- autopairs plugin for bracket matching
 		"windwp/nvim-autopairs",
+		-- Github Copilot
+		"github/copilot.vim",
 		-- NOTE: This is where your plugins related to LSP can be installed.
 		--  The configuration is done below. Search for lspconfig to find it below.
 		{ -- LSP Configuration & Plugins
@@ -80,17 +82,12 @@ function M.setup()
 				},
 			},
 		},
-<<<<<<< HEAD
-=======
 		{
 			"wassimk/gh-navigator.nvim",
-			cmd = { "GH", "GHBlame", "GHFile", "GHPR", "GHRepo" },
 			version = "*",
 			config = true,
 			dev = true,
 		},
->>>>>>> bb18ffc (add scalpel and gh-navigator plugins)
-
 		{ -- Autocompletion
 			"hrsh7th/nvim-cmp",
 			dependencies = { "hrsh7th/cmp-nvim-lsp", "L3MON4D3/LuaSnip", "saadparwaiz1/cmp_luasnip" },
