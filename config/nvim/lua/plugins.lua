@@ -48,23 +48,26 @@ function M.setup()
 		-- Copilot Chat
 		{
 			"CopilotC-Nvim/CopilotChat.nvim",
+			branch = "canary",
 			dependencies = {
-				"MunifTanjim/nui.nvim",
-				"nvim-lua/plenary.nvim",
-				"nvim-telescope/telescope.nvim", -- Optional, for Telescope integration
+				{ "github/copilot.vim" },
+				{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
 			},
-			config = function()
-				require("copilot_chat").setup({
-					panel = {
-						border = "rounded", -- Change border style (rounded, single, etc.)
-					},
-					keymaps = {
-						toggle_chat = "<leader>cc",
-					},
-				})
-			end,
+			build = "make tiktoken", -- Only on MacOS or Linux
+			opts = {
+				panel = {
+					border = "rounded", -- Customize border appearance
+					position = "right", -- Change position of the chat panel
+					width = 50, -- Adjust width of the panel
+				},
+				keymaps = {
+					toggle_chat = "<leader>cc", -- Hotkey to toggle Copilot chat
+					send_message = "<leader>cm", -- Hotkey to send a message
+				},
+			},
+			-- See Configuration section for options
 		},
-
+		-- See Commands section for default commands if you want to lazy load on them
 		-- NOTE: This is where your plugins related to LSP can be installed.
 		--  The configuration is done below. Search for lspconfig to find it below.
 		{ -- LSP Configuration & Plugins
