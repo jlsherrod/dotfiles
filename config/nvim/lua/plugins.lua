@@ -45,6 +45,26 @@ function M.setup()
 		"windwp/nvim-autopairs",
 		-- Github Copilot
 		"github/copilot.vim",
+		-- Copilot Chat
+		{
+			"CopilotC-Nvim/CopilotChat.nvim",
+			dependencies = {
+				"MunifTanjim/nui.nvim",
+				"nvim-lua/plenary.nvim",
+				"nvim-telescope/telescope.nvim", -- Optional, for Telescope integration
+			},
+			config = function()
+				require("copilot_chat").setup({
+					panel = {
+						border = "rounded", -- Change border style (rounded, single, etc.)
+					},
+					keymaps = {
+						toggle_chat = "<leader>cc",
+					},
+				})
+			end,
+		},
+
 		-- NOTE: This is where your plugins related to LSP can be installed.
 		--  The configuration is done below. Search for lspconfig to find it below.
 		{ -- LSP Configuration & Plugins

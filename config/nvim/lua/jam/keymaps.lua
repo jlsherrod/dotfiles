@@ -12,3 +12,7 @@ vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
 --no highlight --
 vim.keymap.set("n", "<leader>n", "<cmd>noh<cr>", { desc = "UN-highlight search" })
+-- Copilot accept suggestion
+vim.api.nvim_set_keymap("i", "<C-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+-- Copilot Chat open chat window
+vim.keymap.set("n", "<leader>cc", "<cmd>CopilotChat<CR>", { desc = "Open Copilot Chat" })
