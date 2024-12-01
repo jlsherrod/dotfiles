@@ -44,7 +44,17 @@ function M.setup()
 		-- autopairs plugin for bracket matching
 		"windwp/nvim-autopairs",
 		-- Github Copilot
-		"github/copilot.vim",
+		{
+			"zbirenbaum/copilot.lua",
+			opts = {
+				suggestion = {
+					auto_trigger = true,
+					keymap = {
+						accept = "<Tab>",
+					},
+				},
+			},
+		},
 		-- Copilot Chat
 		{
 			"CopilotC-Nvim/CopilotChat.nvim",
@@ -156,6 +166,24 @@ function M.setup()
 
 		-- Fuzzy Finder (files, lsp, etc)
 		{ "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
+
+		config = function()
+			require("telescope").setup({
+				defaults = {
+					file_ignore_patterns = {},
+					vimgrep_arguments = {
+						"rg",
+						"--color=never",
+						"--no-heading",
+						"--with-filename",
+						"--line-number",
+						"--column",
+						"--smart-case",
+						"--hidden",
+					},
+				},
+			})
+		end,
 
 		-- Fuzzy Finder Algorithm which requires local dependencies to be built.
 		-- Only load if `make` is available. Make sure you have the system
