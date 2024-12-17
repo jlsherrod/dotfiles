@@ -13,6 +13,9 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Obsidian
+alias oo='cd Library/Mobile Documents/iCloud~md~obsidian/Documents/Main'
+
 #Create 'e' alias for fzf and fancy file finding
 alias e="fd --type f --hidden --exclude .git | fzf | xargs nvim"
 
