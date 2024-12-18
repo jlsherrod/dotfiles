@@ -8,13 +8,18 @@ eval "$(starship init zsh)"
 source $HOME/.zsh/completion
 source $HOME/.zsh/functions
 
+# Extend PATH
+export PATH=~/bin:$PATH
+
 # Add fzf 'fuzzy find' 
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Obsidian
-alias oo='cd Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Main'
+alias oo='cd $HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Main'
+alias or='vim $HOME/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/Main/inbox/*.md'
+alias on='$HOME/bin/on.zsh'
 
 #Create 'e' alias for fzf and fancy file finding
 alias e="fd --type f --hidden --exclude .git | fzf | xargs nvim"

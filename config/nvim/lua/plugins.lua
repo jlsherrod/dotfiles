@@ -38,11 +38,43 @@ function M.setup()
 		"tpope/vim-sleuth",
 		-- Tmux navigator for use with toggleterm.nvim
 		"christoomey/vim-tmux-navigator",
+		-- Obsidian plugin for neovim
+		{
+			"epwalsh/obsidian.nvim",
+			version = "*", -- recommended, use latest release instead of latest commit
+			lazy = false,
+			dependencies = {
+				-- Required.
+				"nvim-lua/plenary.nvim",
+			},
+			opts = {
+				workspaces = {
+					{
+						name = "Main",
+						path = "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Main",
+					},
+				},
+				templates = {
+					subdir = "Templates",
+					date_format = "%Y-%m-%d",
+					time_format = "%H:%M:%S",
+				},
+				completion = {
+					nvim_cmp = true,
+					min_chars = 2,
+				},
+				ui = {
+					-- Disable some things below here because I set these manually for all Markdown files using treesitter
+					enable = false,
+					checkboxes = {},
+					bullets = {},
+				},
+			},
+		},
+
 		-- Toggleterm for terminal access in editor window
 		{ "akinsho/toggleterm.nvim", version = "*", config = true },
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
-		-- autopairs plugin for bracket matching
-		"windwp/nvim-autopairs",
 		-- Github Copilot
 		{
 			"zbirenbaum/copilot.lua",
@@ -58,7 +90,7 @@ function M.setup()
 		-- Copilot Chat
 		{
 			"CopilotC-Nvim/CopilotChat.nvim",
-			branch = "canary",
+			branch = "main",
 			dependencies = {
 				{ "github/copilot.vim" },
 				{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
@@ -86,8 +118,11 @@ function M.setup()
 				-- Automatically install LSPs to stdpath for neovim
 				"williamboman/mason.nvim",
 				"williamboman/mason-lspconfig.nvim",
-				"jose-elias-alvarez/typescript.nvim",
-
+				{
+					"pmizio/typescript-tools.nvim",
+					dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+					opts = {},
+				},
 				-- Useful status updates for:			-- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
 				{ "j-hui/fidget.nvim", opts = {} },
 
