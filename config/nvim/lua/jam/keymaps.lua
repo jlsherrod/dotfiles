@@ -33,7 +33,7 @@ vim.keymap.set("n", "<leader>vf", ":s/\\d\\d\\d\\d-\\d\\d-\\d\\d// | s/-/ /g<cr>
 vim.keymap.set(
 	"n",
 	"<leader>vk",
-	":!mv '%:p' /Users/jimjam/library/Mobile Documents/iCloud~md~obsidian/Documents/Main/zettelkasten<cr>:bd<cr>"
+	":!mv '%:p' /Users/jimjam/library/Mobile\\ Documents/iCloud~md~obsidian/Documents/Main/zettelkasten<cr>:bd<cr>"
 )
 -- delete file in current buffer
 vim.keymap.set("n", "<leader>vdd", ":!rm '%:p'<cr>:bd<cr>")
